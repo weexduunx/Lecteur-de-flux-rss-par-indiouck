@@ -1,4 +1,4 @@
-# Todo-frontend
+# Lecteur de Flux RSS-frontend Angular
 Ce dépôt contient le _frontend_ du mini-projet  qui permet de lire des flux RSS du journal "Le Monde".
  
 ## Démarrage rapide
@@ -9,7 +9,9 @@ Afin de pouvoir exécuter l'application sur votre poste, vous devez d'aborder in
   * NodeJS
   * Angular cli
   * Le dossier du projet par [ici](https://github.com/weexduunx/Lecteur-de-flux-rss-par-indiouck.git)
-### Installation
+
+## Installation
+
 #### Node
   1. Télécharger la version LTS de NodeJS [ici](https://nodejs.org/fr/download/)
   2. Suivre les étapes d'installation en laissant les options par défaut.
