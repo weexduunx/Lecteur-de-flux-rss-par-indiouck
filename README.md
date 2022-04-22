@@ -1,6 +1,11 @@
 # Lecteur de Flux RSS-frontend Angular
 Ce dépôt contient le _frontend_ du mini-projet  qui permet de lire des flux RSS du journal "Le Monde".
  
+## Technologie
+  1. Framework Angular JS
+  2. Framework bootstrap
+  
+
 ## Démarrage rapide
 Ces instructions vont vous permettre d'obtenir une copie fonctionnelle du projet sur votre poste de travail.
 

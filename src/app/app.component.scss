@@ -1,9 +1,4 @@
-header {
-    text-align: center;
-    background-color: #EEE;
-    margin-bottom: 20px;
-    padding: 10px;
-}
+
 footer {
     text-align: center;
     margin-bottom: 20px;
@@ -12,7 +7,7 @@ footer {
 
 .post-card {
     box-sizing: border-box;
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     padding: 10px 30px;
     box-shadow: lightgray 4px 4px 20px;
@@ -44,4 +39,75 @@ footer {
             transform: translate(1px, 1px);
         }
     }
+}
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+  color: black;
+  font-weight: 500;
+  border-top: 1px solid #09238d;
+  border-bottom: 1px solid #09238d;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  color: yellow;
+  border-top: 1px solid yellow;
+  border-bottom: 1px solid yellow;
+}
+
+.nga-navbar {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 11px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 11px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #09238d;
+}
+
+.nga-navbar-logo {
+  font-weight: 700;
+}
+
+.nga-navbar-logo:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+.nga-btn-navbar {
+  color: #fff;
+  background-color: #1976d2;
+  border-color: #0d6efd;
+}
+
+.nga-btn-navbar:hover {
+  color: black;
+  background-color: #grey;
+  border-color: #black;
+}
+
+.nga-logo {
+  font-weight: 700;
+}
+
+.nga-logo:hover {
+  color: black;
+}
+
+.nga-footer {
+  background-color: #09238d;
+  color: white;
+}
+
+.nga-footer a {
+  color: white;
+  text-decoration: none
+}
+
+.nga-footer a:hover,
+.nga-footer a:focus {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.nga-footer .hint {
+  background-color: #1976d2;
+}
+
+.nga-footer .hint:hover {
+  opacity: 0.8;
 }
