@@ -1,79 +1,131 @@
-<header>
+<header class="navbar navbar-expand-md navbar-dark fixed-top nga-navbar">
+  <nav class="container" aria-label="Main navigation">
+    <a href="" class="navbar-brand" alt="Accueil" aria-label="Ndiouck">
+      <img src="./assets/params/images/logo/ganatan-logo.png" srcset="./assets/params/images/logo/ganatan-logo.png,
+      ./assets/params/images/logo/ganatan-logo@2x.png 2x" width="25" height="25" alt="Logo Ganatan">
+      <span class="nga-logo mx-1">Lecteur RSS</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/">
+          <i class="fas fa-home me-1"></i>Home</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/about">
+          <i class="far fa-question-circle me-1"></i>About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/contact">
+          <i class="fas fa-envelope me-1"></i>Contact</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <button type="button" class="btn btn-sm nga-btn-navbar me-2" routerLink="/signup"><i
+          class="fas fa-user-plus me-2"></i>Sign up</button>
+      <button type="button" class="btn btn-sm btn-outline-light me-2" routerLink="/login"><i
+          class="fas fa-sign-in-alt me-2"></i>Login</button>
+    </form>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
   <h1>{{ title }}</h1>
   <span>{{ description }}</span>
-</header>
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-<div class="post-card" *ngFor="let feed of feeds | paginate: { itemsPerPage: 3, currentPage: page, totalItems: totalLenght }; let i = index;">
-  <h2>
-    {{feed.title}}
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#modal'+i">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
-        <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-
-        .201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-
-        .204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.
-        255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069
-        2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
-      </svg>
-        Modifier
-    </button>
-  </h2>
-  <!-- Modal -->
-  <div class="modal fade" [id]="'modal'+i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <form (ngSubmit)="onSubmitForm()">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau titre</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="post-card" *ngFor="let feed of feeds | paginate: { itemsPerPage: 3, currentPage: page, totalItems: totalLenght }; let i = index;">
+    <h2>
+      {{feed.title}}
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#modal'+i">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
+          <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-
+          .201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-
+          .204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.
+          255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069
+          2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
+        </svg>
+          Modifier
+      </button>
+    </h2>
+    <!-- Modal -->
+    <div class="modal fade" [id]="'modal'+i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form (ngSubmit)="onSubmitForm()">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau titre</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input id="title" name="title" type="text" [(ngModel)]="feed.title">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enregistrer</button>
+            </div>
           </div>
-          <div class="modal-body">
-            <input id="title" name="title" type="text" [(ngModel)]="feed.title">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enregistrer</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
+  
+    <a [href]="feed.link">
+      <img [src]="feed.enclosure.link" [alt]="feed.title">
+    </a>
+    <p>
+      {{feed.content}}
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#modalcontent'+i">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
+          <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667
+          1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 
+          .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 
+          1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
+        </svg>
+        Modifier
+      </button>
+    </p>
+    <div class="modal fade" [id]="'modalcontent'+i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form (ngSubmit)="onSubmitForm()">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau extrait</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <textarea id="content" name="content" type="text" [(ngModel)]="feed.content"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enregistrer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <span>Date de publication {{feed.pubDate}}</span>
+
   </div>
 
-  <a [href]="feed.link">
-    <img [src]="feed.enclosure.link" [alt]="feed.title">
-  </a>
-  <p>
-    {{feed.content}}
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" [attr.data-bs-target]="'#modalcontent'+i">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
-        <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667
-        1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 
-        .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 
-        1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
-      </svg>
-      Modifier
-    </button>
-  </p>
-  <div class="modal fade" [id]="'modalcontent'+i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <form (ngSubmit)="onSubmitForm()">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau extrait</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <textarea id="content" name="content" type="text" [(ngModel)]="feed.content"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enregistrer</button>
-          </div>
-        </div>
-      </form>
+</main>
+
+<!-- Pied de Page -->
+<footer class="nga-footer">
+  <div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+  <div class="py-3 text-center" style="background-color: rgb(182, 179, 179);">
+    <div class="container">
+     (C) 2022 <a href="https://github.com/weexduunx"> Idrissa Ndiouck</a>
     </div>
   </div>
-  <span>Date de publication {{feed.pubDate}}</span>
-</div>
-<footer>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </footer>
+<!-- Pied de Page -->
+
+
