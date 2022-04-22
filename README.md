@@ -8,7 +8,7 @@ Ces instructions vont vous permettre d'obtenir une copie fonctionnelle du projet
 Afin de pouvoir exécuter l'application sur votre poste, vous devez d'aborder installer les dépendances suivantes :
   * NodeJS
   * Angular cli
-  * Cloner le projet en effectuant un git clone
+  * Cloner le projet par [ici](https://github.com/weexduunx/Lecteur-de-flux-rss-par-indiouck.git)
 ### Installation
 #### Node
   1. Télécharger la version LTS de NodeJS [ici](https://nodejs.org/fr/download/)
