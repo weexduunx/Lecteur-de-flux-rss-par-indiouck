@@ -80,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lecteur-flux-rss:build:production"
+              "browserTarget": "lecteur-de-flux-rss-par-indiouck:build:production"
             },
             "development": {
-              "browserTarget": "lecteur-flux-rss:build:development"
+              "browserTarget": "lecteur-de-flux-rss-par-indiouck:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lecteur-flux-rss:build"
+            "browserTarget": "lecteur-de-flux-rss-par-indiouck:build"
           }
         },
         "test": {
@@ -116,5 +116,5 @@
       }
     }
   },
-  "defaultProject": "lecteur-flux-rss"
+  "defaultProject": "lecteur-de-flux-rss-par-indiouck"
 }

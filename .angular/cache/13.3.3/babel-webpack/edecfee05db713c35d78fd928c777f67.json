@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  application: {\n    name: 'lecteur-de-flux-rss-par-indiouck',\n    angular: 'Angular 13.3.3',\n    bootstrap: 'Bootstrap 5.1.3',\n    fontawesome: 'Font Awesome 6.1.1'\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

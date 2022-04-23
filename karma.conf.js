@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/lecteur-flux-rss'),
+      dir: require('path').join(__dirname, './coverage/lecteur-de-flux-rss-par-indiouck'),
       subdir: '.',
       reporters: [
         { type: 'html' },
